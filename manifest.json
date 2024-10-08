@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "拼音笔记",
+  "version": "1.0",
+  "description": "随时查看拼音 随时记录 随时回忆",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["pinyin-pro.js", "content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
